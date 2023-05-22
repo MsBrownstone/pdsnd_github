@@ -4,10 +4,10 @@
 22nd May 2023
 
 ### Project Title
-Replace the Project Title
+Explore Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+In this project, I used Python to explore data related to bike share systems for three major cities in the United States: Chicago, New York City, and Washington. The script takes in raw input to create an interactive experience in the terminal to present statistics and answer interesting questions.
 
 ### Files used
 Include the files used
