@@ -166,7 +166,7 @@ def user_stats(df, city):
     if city == 'chicago' or city == 'new york':
         print("There are {} counts of genders \n".format(df['Gender'].value_counts()))
     else:
-        print("Washington has no data on gender")
+        print("Washington has no data on user gender")
 
     # display earliest, most recent, and most common year of birth
     if city == 'chicago' or city == 'new york':
@@ -174,7 +174,7 @@ def user_stats(df, city):
         print("Most recent year of birth is ", df['Birth Year'].max(), "\n")
         print("Most common year of birth is ", df['Birth Year'].mode()[0], "\n")
     else:
-        print("Washington has no data on birth year")
+        print("Washington has no data on user birth year")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
