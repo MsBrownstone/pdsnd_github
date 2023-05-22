@@ -17,7 +17,12 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+
+    # print message initiating user experience
     print('Hello! Let\'s explore some US Bikeshare data.')
+
+
+
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         city = input('Which city data would you like to access: Chicago, New York or Washington? \n').lower()
@@ -116,10 +121,10 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-    print("The most commonly used start station is ", df['Start Station'].mode()[0], "\n")
+    print("The most frequently used start station is ", df['Start Station'].mode()[0], "\n")
 
     # display most commonly used end station
-    print("The most commonly used end station is ", df['End Station'].mode()[0], "\n")
+    print("The most frequently used end station is ", df['End Station'].mode()[0], "\n")
 
     # display most frequent combination of start station and end station trip
     df['fr_combination'] = df['Start Station'] + " and " + df['End Station']
@@ -162,7 +167,7 @@ def user_stats(df, city):
     if city == 'chicago' or city == 'new york':
         print("There are {} counts of genders \n".format(df['Gender'].value_counts()))
     else:
-        print("Washington has no data on gender")
+        print("Washington has no data on user gender")
 
     # display earliest, most recent, and most common year of birth
     if city == 'chicago' or city == 'new york':
@@ -170,7 +175,7 @@ def user_stats(df, city):
         print("Most recent year of birth is ", df['Birth Year'].max(), "\n")
         print("Most common year of birth is ", df['Birth Year'].mode()[0], "\n")
     else:
-        print("Washington has no data on birth year")
+        print("Washington has no data on user birth year")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
